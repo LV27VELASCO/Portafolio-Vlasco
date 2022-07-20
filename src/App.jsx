@@ -5,11 +5,25 @@ import { useState } from 'react'
 import '../src/elements/SobreMi.css'
 import '../src/elements/Habilidades.css'
 import '../src/elements/Contacto.css'
+import Form from './elements/Form'
+
 
 function App() {
 
   const [navbar, setNavbar] = useState(false)
   const [porcentaje, setPorcentaje] = useState(false)
+  const [btnActive, setBtnActive] = useState(false)
+
+  const click= () =>{
+    if (btnActive){
+      setBtnActive(false)
+    }else{
+      setBtnActive(true)
+    }
+   
+
+  }
+
 
   const scrollNav = () => {
     if (window.scrollY >= 40) {
@@ -213,6 +227,27 @@ function App() {
                 <p>Barranquilla, Colombia</p>
               </div>
             </div>
+          </div>
+
+          <div className='container-form'>
+            <div className="button-message" onClick={click}>
+              <span className="icon-message">
+                {btnActive?
+                <i className='bx bxs-low-vision'></i>
+                :
+                <i className='bx bx-mail-send'></i>
+              }
+              </span>
+              <button id='descarga' type="button" name="Hover">{btnActive?'Hide form':'Send mail'}</button>
+            </div>
+            {
+              btnActive
+              ?
+              <Form/>
+              :
+              <></>
+            }
+            
           </div>
         </div>
       </section>

@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   background: transparent;
   top: 0;
   z-index: 100;
@@ -59,7 +59,6 @@ body::-webkit-scrollbar-thumb{
   z-index: 100;
   animation: fadeInDown;
   animation-duration: .6s;
-
 }
 
 .contain-nav {
