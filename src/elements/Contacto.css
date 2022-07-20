@@ -63,9 +63,12 @@
 
 .contact-means{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    gap: 7rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 90%;
+    height: 50%;
 }
 
 .info{
