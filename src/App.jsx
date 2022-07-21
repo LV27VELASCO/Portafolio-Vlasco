@@ -19,6 +19,15 @@ function App() {
   const [navbar, setNavbar] = useState(false)
   const [porcentaje, setPorcentaje] = useState(false)
   const [btnActive, setBtnActive] = useState(false)
+  const [menuActive, setMenuActive] = useState(false)
+
+  const clickMenu = () => {
+    if (menuActive) {
+      setMenuActive(false)
+    } else {
+      setMenuActive(true)
+    }
+  }
 
   const click = () => {
     if (btnActive) {
@@ -52,13 +61,13 @@ function App() {
 
   return (
     <article className='app'>
-      <nav className={navbar ? 'nav-active' : 'nav'}>
+      <nav className={navbar ? 'nav active' : 'nav'}>
         <div className="contain-nav">
           <div className="contain-logo">
-            <div className='logo'></div>
+            <div className='logo'>{/*Logo, colocado con css*/}</div>
           </div>
 
-          <div className="nav-contain-rutes">
+          <div className={menuActive?'nav-contain-rutes active':"nav-contain-rutes"}>
             <ul className='ul-rutes'>
               <li><a href='#Principal' className='nav-link' >Principal</a></li>
               <li><a href='#2' className='nav-link'>Sobre Mi</a></li>
@@ -67,6 +76,7 @@ function App() {
               <li><a href='#5' className='nav-link'>Contacto</a></li>
             </ul>
           </div>
+          <div className='contain-menu' onClick={clickMenu}>{menuActive?<i class='bx bx-x'></i>:<i className='bx bx-menu-alt-right'></i>}</div>
         </div>
       </nav>
       <header className='Principal' id='Principal'>
@@ -108,10 +118,10 @@ function App() {
             </div>
             <div className='contain-buttons'>
               <a href="#5">
-              <div className="button-container-1">
-                <span className="contact"><i className='bx bxs-paper-plane'></i></span>
-                <button id='work' type="button" name="Hover">CONTACTO</button>
-              </div>
+                <div className="button-container-1">
+                  <span className="contact"><i className='bx bxs-paper-plane'></i></span>
+                  <button id='work' type="button" name="Hover">CONTACTO</button>
+                </div>
               </a>
               <div className="button-container-2">
                 <span className="hv"><i className='bx bxs-download'></i></span>
@@ -245,8 +255,8 @@ function App() {
                 <h3>Pokedex</h3>
                 <p>Proyecto desarrollado en Academlo. En este proyecto creamos una app de la famosa
                   serie Pokemons, en esta consumimos recursos de una API la cual nos arrojaba toda la informacion
-                  de los pokemones usando REACT<br/>
-                  
+                  de los pokemones usando REACT<br />
+
                 </p>
               </div>
             </a>

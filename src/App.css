@@ -48,7 +48,7 @@ body::-webkit-scrollbar-thumb{
   transition: all .4s ease-in ;
 }
 
-.nav-active {
+.nav.active{
   width: 100%;
   padding: 10px;
   display: flex;
@@ -62,8 +62,15 @@ body::-webkit-scrollbar-thumb{
   animation-duration: .6s;
 }
 
+.contain-menu{
+  padding: 5px;
+  font-size: 1.6rem;
+  color: whitesmoke;
+  display: none;
+}
+
 .contain-nav {
-  width: 85%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +102,7 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 1.1rem;
 }
 
 .nav-link {
@@ -213,7 +220,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-@media (max-width:620px){
+@media screen and (max-width:620px){
   .content-yo{
     font-size: 2.5rem;
   }
@@ -224,5 +231,47 @@ body::-webkit-scrollbar-thumb{
 
   .content-soy>.text{
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:670px){
+
+  .contain-nav{
+    width: 95%;
+  }
+
+  .contain-menu{
+    display: block;
+    cursor: pointer;
+  }
+
+
+
+  .nav-contain-rutes {
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    top: 10vh;
+    right: 0;
+    height: 100vh;
+    position: absolute;
+    background-color: #000000;
+    transform: translateX(100%);
+    transition: all .5s ease-in-out;
+  }
+
+  .nav-contain-rutes.active{
+    transform: translate(0);
+  }
+
+  .ul-rutes {
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+  }
+
+
+  .ul-rutes>li>a{
+    font-size: 1.25rem;
   }
 }
