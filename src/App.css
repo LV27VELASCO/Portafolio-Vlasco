@@ -32,6 +32,7 @@ body::-webkit-scrollbar-thumb{
 .app{
   width: fit-content;
   position: relative;
+  overflow: hidden;
 }
 
 
@@ -55,7 +56,7 @@ body::-webkit-scrollbar-thumb{
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: rgb(9, 9, 9);
+  background-color: rgb(2, 2, 2);
   top: 0;
   z-index: 100;
   animation: fadeInDown;
@@ -251,11 +252,11 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    top: 10vh;
+    top: 7vh;
     right: 0;
     height: 100vh;
     position: absolute;
-    background-color: #000000;
+    background-color: rgb(2, 2, 2);
     transform: translateX(100%);
     transition: all .5s ease-in-out;
   }
