@@ -7,6 +7,7 @@ import quotecard from '../src/assets/img/quote-machine.png'
 import shoppingcard from '../src/assets/img/shopping-card.png'
 import weathercard from '../src/assets/img/weather-app.png'
 import perfil from '../src/assets/img/Perfil-luis.jpg'
+import curriculum from '../src/assets/img/Luis_Velasco_currículum.pdf'
 import { useState } from 'react'
 import '../src/style/SobreMi.css'
 import '../src/style/Habilidades.css'
@@ -111,9 +112,9 @@ function App() {
               <p>Busco incrementar mis habilidades en el área de Desarrollo Web y la Inteligencia Artificial, por lo cual en la actualidad estoy estudiando el programa de Desarrollo Web Full-Stack y Ciencias de la Computación en <b>Academlo</b>.</p>
               <p>En mis tiempos libres me gusta incrementar mi conocimiento, indagando sobre las tecnicas de vanguardia que se utilizan en el ámbito laboral.</p></div>
             <div className='contain-redes'>
-              <div className='redes'><i className='bx bxl-linkedin'></i></div>
-              <div className='redes'><i className='bx bxl-github'></i></div>
-              <div className='redes'><i className='bx bxl-instagram'></i></div>
+              <a href="https://www.linkedin.com/in/luis-velasco-24b668199" target='_blank'><div className='redes'><i className='bx bxl-linkedin'></i></div></a>
+              <a href="https://github.com/LV27VELASCO" target='_blank'><div className='redes'><i className='bx bxl-github'></i></div></a>
+              <a href="https://www.instagram.com/velasco.27/" target='_blank'><div className='redes'><i className='bx bxl-instagram'></i></div></a>
             </div>
             <div>
             </div>
@@ -126,7 +127,7 @@ function App() {
               </a>
               <div className="button-container-2">
                 <span className="hv"><i className='bx bxs-download'></i></span>
-                <button id='descarga' type="button" name="Hover">DESCARGA CV</button>
+                <a href={curriculum} download='Luis Velasco CV' ><button id='descarga' type="button" name="Hover">DESCARGA CV</button></a>
               </div>
             </div>
           </div>
