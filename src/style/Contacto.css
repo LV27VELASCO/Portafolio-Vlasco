@@ -212,6 +212,7 @@
 
 input{
     width: 100%;
+    color: #f6f1f1;
     padding: 6px;
     border: none;
     background-color: rgba(128, 128, 128, 0.524);
@@ -228,7 +229,7 @@ input[type=number]::-webkit-outer-spin-button{
 }
 
 input::placeholder{
-    color: #e8e0e0c6;
+    color: #929090c6;
     font-size: 12px;
 }
 
@@ -276,6 +277,7 @@ textarea{
     outline: none;
     font-family:var(---Josefin-Sans);
     border-radius: 2px;
+    color: whitesmoke;
 }
 
 textarea::-webkit-scrollbar{
