@@ -31,6 +31,7 @@ body::-webkit-scrollbar-thumb{
 
 .app{
   width: fit-content;
+  position: relative;
 }
 
 
@@ -40,8 +41,8 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  background: transparent;
+  position: absolute;
+  background:transparent;
   top: 0;
   z-index: 100;
   transition: all .4s ease-in ;
@@ -212,3 +213,16 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+@media (max-width:620px){
+  .content-yo{
+    font-size: 2.5rem;
+  }
+
+  .content-soy>.title-soy{
+    display: none;
+  }
+
+  .content-soy>.text{
+    font-size: 2rem;
+  }
+}
