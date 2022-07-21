@@ -1,7 +1,7 @@
 import './App.css'
 import { Route, Routes, NavLink } from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
-import instacard from '../src/assets/img/insta-clone.png'
+import instacard from '../src/assets/img/Insta-clone.png'
 import pokeapp from '../src/assets/img/Pokemon-app2.png'
 import quotecard from '../src/assets/img/quote-machine.png'
 import shoppingcard from '../src/assets/img/shopping-card.png'
