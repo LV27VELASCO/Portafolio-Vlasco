@@ -6,6 +6,7 @@ import pokeapp from '../src/assets/img/Pokemon-app2.png'
 import quotecard from '../src/assets/img/quote-machine.png'
 import shoppingcard from '../src/assets/img/shopping-card.png'
 import weathercard from '../src/assets/img/weather-app.png'
+import perfil from '../src/assets/img/Perfil-luis.jpg'
 import { useState } from 'react'
 import '../src/style/SobreMi.css'
 import '../src/style/Habilidades.css'
@@ -101,7 +102,7 @@ function App() {
       <section className='sobre-mi' id='2'>
         <div className='contain-datos'>
           <div className='container-foto'>
-            <div className="foto">{/*Foto presentacion, colocada con css*/}</div>
+            <img src={perfil} className="foto"/>
           </div>
           <div className='presentacion'>
             <div className='profesion'><h2>Desarrollador Web</h2></div>
