@@ -219,7 +219,7 @@ function App() {
           <h1>Portafolio</h1>
         </div>
         <div className='flex-portafolio'>
-          <div className="card">
+          <div className="cardxxxx">
             <img src={shoppingcard} />
             <div className='description-card'>
               <h3>Ecomerce</h3>
