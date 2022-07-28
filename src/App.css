@@ -387,11 +387,10 @@ body::-webkit-scrollbar-thumb{
 
   .app .nav-contain-rutes.active{
     background-color:var(---DarkInactive);
-   
     transition: all .5s ease-in-out;
   }
 
-  .app.active .nav-contain-rutes a,.app.active .contain-menu {
+  .app.active .nav-contain-rutes.active a,.app.active .contain-menu {
     color: var(---letter-Dark-Active);
   }
   .app .nav-contain-rutes.active a, .app .contain-menu{
