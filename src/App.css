@@ -429,7 +429,7 @@ body::-webkit-scrollbar-thumb{
   .ul-rutes {
     flex-direction: column;
     height: 100%;
-    gap: 3rem;
+    gap: 5.2rem;
   }
 
 
