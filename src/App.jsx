@@ -7,6 +7,7 @@ import quotecard from '../src/assets/img/quote-machine.png'
 import shoppingcard from '../src/assets/img/shopping-card.png'
 import weathercard from '../src/assets/img/weather-app.png'
 import perfil from '../src/assets/img/Perfil-luis.jpg'
+import RickandMorty from '../src/assets/img/Rick-and-morty.png'
 import curriculum from '../src/assets/img/Currículum_Luis_Velasco.pdf'
 import { useState } from 'react'
 import '../src/style/SobreMi.css'
@@ -291,6 +292,20 @@ function App() {
               </div>
             </a>
           </div>
+
+          <div className="card">
+            <img src={RickandMorty} />
+            <a href="https://veloc-rick-and-morty-api.netlify.app" target='_blank'>
+              <div className='description-card'>
+                <h3>Rick And Morty Wiki</h3>
+                <p>Una wikipedia de la serie Rick And Morty donde puedes buscar a traves de dimensiones, los personajes que residen 
+                  en ellas y a su vez ver características
+                   de esos personajes. <br/>
+                   Se implementó REACT y CSS para este proyecto.</p>
+              </div>
+            </a>
+          </div>
+
 
         </div>
 
