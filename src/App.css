@@ -12,10 +12,6 @@ html{
   scroll-behavior: smooth;
 }
 
-body{
-  display: block;
-}
-
 body::-webkit-scrollbar{
   width: 5px;
   background-color:black;
@@ -31,13 +27,139 @@ body::-webkit-scrollbar-thumb{
 :root {
   ---Poppins: 'Poppins', sans-serif;
   ---Josefin-Sans: 'Josefin Sans', sans-serif;
+  ---DarkActive:#000000;
+  ---DarkInactive:rgb(222, 217, 217);
+  ---letter-Dark-Inactive:#000000;
+  ---letter-Dark-Active:white;
+  ---Parrafo-Dark-inactive:rgb(0, 0, 0);
+  ---Parrafo-Dark-active:rgb(189, 185, 185);
 }
 
 .app{
   width: fit-content;
   position: relative;
   overflow: hidden;
+  background-color:var(---DarkInactive);
+  transition: all .5s ease-in-out;
 }
+
+.app.active{
+  background-color: var(---DarkActive);
+  transition: all .5s ease-in-out;
+}
+
+.app.active h2{
+  color: var(---letter-Dark-Active);
+}
+
+.app h2{
+  color:var(---letter-Dark-Inactive) ;
+}
+
+
+.app.active .redes{
+  border: 1px solid white;
+  color: whitesmoke;
+}
+
+.app .redes{
+  border: 1px solid rgb(72, 70, 70);
+  color: rgba(11, 11, 11, 0.857);
+}
+
+
+.app .parrafo, .app footer>span{
+  color:var(---Parrafo-Dark-inactive);
+  transition: all ease-in-out .7s;
+}
+
+.app.active .parrafo,.app.active footer>span{
+  color: var(---Parrafo-Dark-active);
+  transition: all ease-in-out .7s;
+}
+
+.app>nav.active{
+  background-color: var(---DarkInactive);
+  color: #000000;
+}
+
+.app>nav.active a{
+  color: #000000;
+  transition: all .5s ease-in-out;
+}
+
+
+
+
+.app.active>nav.active{
+  background-color:black;
+}
+
+.app.active>nav.active a{
+  color: whitesmoke;
+  transition: all .5s ease-in-out;
+}
+
+.dark{
+  font-size: 1.2rem;
+  background-color: rgb(5, 17, 55);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(10, 7, 7);
+  padding: 2px 5px;
+  border-radius: 20px;
+  display: flex;
+  gap: .2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+  box-shadow: 0px 0px 5px 0px rgba(14, 13, 13, 0.88);
+}
+.dark::after{
+  content:'';
+  width: 6px;
+  height:6px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(6, 4, 4);
+  border-radius: 50%;
+  position: absolute;
+  right:unset;
+  left:0;
+  transform: translateY(-12%);
+  transition: all ease-in-out .5s;
+}
+
+.dark.active{
+  font-size: 1.2rem;
+  background-color: rgb(245, 208, 74);
+  color: whitesmoke;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 2px 5px;
+  border-radius: 20px;
+  display: flex;
+  gap: .2rem;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(235, 235, 133, 0.88);
+  transition: all ease-in-out .5s;
+}
+.dark.active::after{
+  content:'';
+  width: 6px;
+  height:6px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(237, 237, 237);
+  border-radius: 50%;
+  position: absolute;
+  left: unset;
+  right:0;
+  transform: translateY(-12%);
+  transition: all ease-in-out .5s;
+}
+
+
+
 
 
 .nav {
@@ -60,7 +182,6 @@ body::-webkit-scrollbar-thumb{
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: rgb(2, 2, 2);
   top: 0;
   z-index: 100;
   animation: fadeInDown;
@@ -94,6 +215,17 @@ body::-webkit-scrollbar-thumb{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: all .8s ease-in-out;
+}
+
+.logo.active{
+  width: 100%;
+  height: 100%;
+  background-image: url('../src/assets/img/Logo-nav-active.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .8s ease-in-out;
 }
 
 .nav-contain-rutes {
@@ -108,6 +240,10 @@ body::-webkit-scrollbar-thumb{
   justify-content: center;
   align-items: center;
   gap: 1.1rem;
+}
+
+.ul-rutes a{
+  font-weight: 600;
 }
 
 .nav-link {
@@ -168,6 +304,8 @@ body::-webkit-scrollbar-thumb{
 .content-yo>* {
   font-family: var(---Josefin-Sans);
   font-weight: 300;
+  font-size: 3.2rem;
+  color: whitesmoke;
 }
 
 .bx-heart {
@@ -215,6 +353,7 @@ body::-webkit-scrollbar-thumb{
   font-family: var(---Josefin-Sans);
   font-weight: 200;
   font-size: 4rem;
+  color: whitesmoke;
 }
 
 .text {
@@ -239,7 +378,27 @@ body::-webkit-scrollbar-thumb{
   }
 }
 
-@media screen and (max-width:670px){
+@media screen and (max-width:748px){
+
+  .app.active .nav-contain-rutes.active{
+    background-color: var(---DarkActive);
+    transition: all .5s ease-in-out;
+  }
+
+  .app .nav-contain-rutes.active{
+    background-color:var(---DarkInactive);
+   
+    transition: all .5s ease-in-out;
+  }
+
+  .app.active .nav-contain-rutes a,.app.active .contain-menu {
+    color: var(---letter-Dark-Active);
+  }
+  .app .nav-contain-rutes.active a, .app .contain-menu{
+    color: var(---letter-Dark-Inactive);
+  }
+
+
 
   .contain-nav{
     width: 95%;
@@ -256,11 +415,10 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    top: 7vh;
+    top: 7.95vh;
     right: 0;
     height: 100vh;
     position: absolute;
-    background-color: rgb(2, 2, 2);
     transform: translateX(100%);
     transition: all .5s ease-in-out;
   }

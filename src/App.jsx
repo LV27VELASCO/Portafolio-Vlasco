@@ -7,7 +7,7 @@ import quotecard from '../src/assets/img/quote-machine.png'
 import shoppingcard from '../src/assets/img/shopping-card.png'
 import weathercard from '../src/assets/img/weather-app.png'
 import perfil from '../src/assets/img/Perfil-luis.jpg'
-import curriculum from '../src/assets/img/Luis_Velasco_currículum.pdf'
+import curriculum from '../src/assets/img/Currículum_Luis_Velasco.pdf'
 import { useState } from 'react'
 import '../src/style/SobreMi.css'
 import '../src/style/Habilidades.css'
@@ -22,6 +22,13 @@ function App() {
   const [porcentaje, setPorcentaje] = useState(false)
   const [btnActive, setBtnActive] = useState(false)
   const [menuActive, setMenuActive] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
+
+  const modeDark=()=>{
+    if(darkMode){
+      setDarkMode(false)
+    }else{setDarkMode(true)}
+  }
 
   const clickMenu = () => {
     if (menuActive) {
@@ -62,23 +69,28 @@ function App() {
 
 
   return (
-    <article className='app'>
+    <article className={darkMode?'app active' : 'app'}>
       <nav className={navbar ? 'nav active' : 'nav'}>
         <div className="contain-nav">
           <div className="contain-logo">
-            <div className='logo'>{/*Logo, colocado con css*/}</div>
+            <div className={darkMode?'logo':'logo active'}>{/*Logo, colocado con css*/}</div>
           </div>
 
-          <div className={menuActive?'nav-contain-rutes active':"nav-contain-rutes"}>
+          <div className={menuActive ? 'nav-contain-rutes active' : "nav-contain-rutes"}>
             <ul className='ul-rutes'>
               <li><a href='#Principal' className='nav-link' >Principal</a></li>
               <li><a href='#2' className='nav-link'>Sobre Mi</a></li>
               <li><a href='#3' className='nav-link'>Habilidades</a></li>
               <li><a href='#4' className='nav-link'>Portafolio</a></li>
               <li><a href='#5' className='nav-link'>Contacto</a></li>
+              <li><div onClick={modeDark} className={darkMode ? "dark active" : "dark"}>
+              <i className='bx bx-sun'></i>
+              <i className='bx bx-moon' ></i>
+            </div></li>
             </ul>
+            
           </div>
-          <div className='contain-menu' onClick={clickMenu}>{menuActive?<i class='bx bx-x'></i>:<i className='bx bx-menu-alt-right'></i>}</div>
+          <div className='contain-menu' onClick={clickMenu}>{menuActive ? <i className='bx bx-x'></i> : <i className='bx bx-menu-alt-right'></i>}</div>
         </div>
       </nav>
       <header className='Principal' id='Principal'>
@@ -103,7 +115,7 @@ function App() {
       <section className='sobre-mi' id='2'>
         <div className='contain-datos'>
           <div className='container-foto'>
-            <img src={perfil} className="foto"/>
+            <img src={perfil} className="foto" />
           </div>
           <div className='presentacion'>
             <div className='profesion'><h2>Desarrollador Web</h2></div>
@@ -164,10 +176,6 @@ function App() {
               <h3>Banco Serfinanza</h3>
               <p>Aux Comercial</p>
             </div>
-            <div className='data'>
-              <h3>Ojiva Consultores S.A de C.V</h3>
-              <p>Tecnología e Investigación</p>
-            </div>
           </div>
 
           <div className='skills'>
@@ -179,35 +187,45 @@ function App() {
                 <h3>Habilidades</h3>
               </div>
             </div>
+            <div className='contain-programs'>
+              <div className='programs'>
+                <h4>HTML</h4>
 
-            <div className='data'>
-              <h4>HTML</h4>
-              <div className={porcentaje ? 'skills-progress html' : ''}>
-                <span className={porcentaje ? 'progress' : ''}></span>
+                <div className='icon-hability'>
+                  <i className='bx bxl-html5' id='html'></i>
+                </div>
               </div>
-            </div>
-            <div className='data'>
-              <h4>CSS</h4>
-              <div className={porcentaje ? 'skills-progress css' : ''}>
-                <span className={porcentaje ? 'progress' : ''}></span>
+              <div className='programs'>
+                <h4>CSS</h4>
+                <div className='icon-hability'>
+                  <i className='bx bxl-css3' id='css'></i>
+                </div>
               </div>
-            </div>
-            <div className='data'>
-              <h4>JavaScript</h4>
-              <div className={porcentaje ? 'skills-progress js' : ''}>
-                <span className={porcentaje ? 'progress' : ''}></span>
+              <div className='programs'>
+                <h4>JavaScript</h4>
+
+                <div className='icon-hability'>
+                  <i className='bx bxl-javascript' id='javascript'></i>
+                </div>
               </div>
-            </div>
-            <div className='data'>
-              <h4>React</h4>
-              <div className={porcentaje ? 'skills-progress react' : ''}>
-                <span className={porcentaje ? 'progress' : ''}></span>
+              <div className='programs'>
+                <h4>React</h4>
+
+                <div className='icon-hability'>
+                  <i className='bx bxl-react' id='react'></i>
+                </div>
               </div>
-            </div>
-            <div className='data'>
-              <h4>GitHub</h4>
-              <div className={porcentaje ? 'skills-progress github' : ''}>
-                <span className={porcentaje ? 'progress' : ''}></span>
+              <div className='programs'>
+                <h4>GitHub</h4>
+                <div className='icon-hability'>
+                  <i className='bx bxl-github' id='git'></i>
+                </div>
+              </div>
+              <div className='programs'>
+                <h4>Redux</h4>
+                <div className='icon-hability'>
+                  <i className='bx bxl-redux' id='redux'></i>
+                </div>
               </div>
             </div>
           </div>
@@ -216,7 +234,7 @@ function App() {
 
       <section id='4' className='portafolio'>
         <div className='title-portafolio'>
-          <h1>Portafolio</h1>
+          <h2>Portafolio</h2>
         </div>
         <div className='flex-portafolio'>
           <div className="cardxxxx">
@@ -282,27 +300,27 @@ function App() {
       <section id='5' className='contacto'>
         <div className='container-contacto'>
           <div className='title-contact'>
-            <h2>Contacto</h2>
+            <h3>Contacto</h3>
           </div>
           <div className='contact-means'>
             <div className='info'>
               <i className='bx bx-devices'></i>
               <div className='contacting'>
-                <h2>Phone</h2>
+                <h3>Phone</h3>
                 <p>+57 314 660 5344</p>
               </div>
             </div>
             <div className='info'>
               <i className='bx bxs-envelope-open'></i>
               <div className='contacting'>
-                <h2>Email</h2>
+                <h3>Email</h3>
                 <p>luiselsw27@gmail.com</p>
               </div>
             </div>
             <div className='info'>
               <i className='bx bx-current-location bx-rotate-90'></i>
               <div className='contacting'>
-                <h2>Adress</h2>
+                <h3>Adress</h3>
                 <p>Barranquilla, Colombia</p>
               </div>
             </div>

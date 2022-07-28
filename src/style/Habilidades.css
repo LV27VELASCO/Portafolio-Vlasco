@@ -87,6 +87,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
+    width: fit-content;
 }
 
 .data>h3 {
@@ -98,6 +99,7 @@
 .data>p {
     font-size: 1.05rem;
     font-weight: 200;
+    
 }
 
 .data>h4 {
@@ -109,111 +111,61 @@
     align-items: flex-end;
 }
 
-.skills-progress {
-    height: 3px;
-    width: 100%;
-    background-color: rgba(88, 86, 86, 0.281);
-    position: relative;
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: progres 1s cubic-bezier(1,0,0.5,1) forwards;
+
+.programs{
+    font-family: var(---Josefin-Sans);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: fit-content;
+    text-align: center;
+    padding: 5px;
 }
 
-@keyframes progres {
-    100%{
-        transform: scaleX(1);
-    }
+.programs>h4{
+    font-weight: 400;
 }
 
-.skills-progress .progress {
-    height: 100%;
-    width: 90%;
-    position: absolute;
-    transform-origin: left;
-    background-color: #C49B66;
-    opacity: 0;
-    animation: allprogres 0.5s 1s linear forwards;
+.contain-programs{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.3rem;
 }
 
-@keyframes allprogres {
-    100%{opacity: 1;}
+.icon-hability{
+    text-align: center;
+    font-size: 3.8rem;
+    animation: pulse infinite linear;
+  animation-duration: 2.3s; 
 }
 
-
-
-.skills-progress .progress::before {
-    position: absolute;
-    content: "";
-    top: -4px;
-    right: 0;
-    height: 0;
-    width: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0;
-    border-top-color: #C49B66;
-    opacity: 0;
-    animation: progresing 0.5s 1.5s linear forwards;
+#html{
+    color: rgba(255, 128, 0, 0.865);
 }
 
-
-
-.skills-progress.html .progress {
-    width: 95%;
+#css{
+    color: rgba(0, 81, 255, 0.978);
 }
 
-.skills-progress.css .progress {
-    width: 90%;
+#javascript{
+    color: yellow;
 }
 
-.skills-progress.js .progress {
-    width: 75%;
+#react{
+    color: rgb(0, 179, 255);
 }
 
-.skills-progress.react .progress {
-    width: 70%;
+#git{
+    color: #000000;
 }
 
-.skills-progress.github .progress {
-    width: 50%;
+#redux{
+    color: rgb(51, 2, 116);
 }
 
 
-.skills-progress .progress::after {
-    position: absolute;
-    padding: 1px 2px;
-    border-radius: 3px 3px 0px 3px;
-    top: -14px;
-    font-size: 0.58rem;
-    right: 0;
-    background-color: #C49B66;
-    opacity: 0;
-    animation: progresing 0.5s 1.5s linear forwards;
-}
-
-@keyframes progresing {
-    100%{opacity: 1;}
-}
-
-.skills-progress.html .progress::after {
-    content: '95%';
-}
-
-.skills-progress.css .progress::after {
-    content: '90%';
-}
-
-.skills-progress.js .progress::after {
-    content: '75%';
-}
-
-.skills-progress.react .progress::after {
-    content: '70%';
-}
-
-.skills-progress.github .progress::after {
-    content: '50%';
-}
 
 @media (max-width:620px) {
     .contain-habilidades {

@@ -38,7 +38,7 @@
 
 .title-contact{
     padding: 5px 5px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-family:var(---Josefin-Sans);
     position: relative;
 }
@@ -96,7 +96,7 @@
     font-family: var(---Josefin-Sans);
 }
 
-.contacting>h2{
+.contacting>h3{
     font-size: 1.1rem;
     font-weight: 400;
 }
@@ -317,8 +317,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
-    color: whitesmoke;
     font-family: var(---Josefin-Sans);
-    font-size: .9rem;
+    font-size: .8rem;
+    font-weight: 600;
 }

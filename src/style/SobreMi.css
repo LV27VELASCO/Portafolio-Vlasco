@@ -7,7 +7,6 @@
 .sobre-mi {
   width: 100%;
   height: auto;
-  background-color: #000000;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -106,7 +105,6 @@
 .parrafo {
   font-family: var(---Josefin-Sans);
   font-weight: 300;
-  color: rgb(189, 185, 185);
   font-size: 1.2rem;
   text-align: center;
   display: flex;
