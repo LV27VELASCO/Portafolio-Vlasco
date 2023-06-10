@@ -181,6 +181,10 @@
     color: rgb(190,190,190);
 }
 
+#nodejs{
+    color: rgb(149,185,77);
+}
+
 
 @media (max-width:620px) {
     .contain-habilidades {

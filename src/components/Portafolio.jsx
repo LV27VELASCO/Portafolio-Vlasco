@@ -9,7 +9,7 @@ import RickandMorty from '../assets/img/Rick-and-morty.png'
 const Portafolio = () => {
   return (
     <>
-    <section id='4' className='portafolio'>
+    <section id='Portafolio' className='portafolio'>
         <div className='title-portafolio'>
           <h2>Portafolio</h2>
         </div>

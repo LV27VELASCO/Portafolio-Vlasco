@@ -12,7 +12,7 @@ const Contacto = () => {
       }
   return (
     <>
-    <section id='5' className='contacto'>
+    <section id='Contacto' className='contacto'>
         <div className='container-contacto'>
           <div className='title-contact'>
             <h3>Contacto</h3>

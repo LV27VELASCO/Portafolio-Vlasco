@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect'
 const Portada = () => {
   return (
     <>
-    <header className='Principal' id='Principal'>
+    <header className='Inicio' id='Inicio'>
         <div className="contain-content">
           <div className='content-yo'>
             <h3 className='yo'>Yo </h3><i className='bx bx-heart'></i><span>programar</span>

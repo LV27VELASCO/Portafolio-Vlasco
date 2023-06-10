@@ -253,10 +253,10 @@ body::-webkit-scrollbar-thumb{
 }
 
 .nav-link:hover {
-  color:#C49B66;
+  color:#C49B66 !important;
 }
 
-.Principal {
+.Inicio {
   width: 100%;
   height: 100vh;
   background-image: url(../src/assets/img/Portada.jpg);
@@ -271,7 +271,7 @@ body::-webkit-scrollbar-thumb{
   top: 0;
 }
 
-.Principal::before {
+.Inicio::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -408,7 +408,7 @@ body::-webkit-scrollbar-thumb{
   .ul-rutes {
     flex-direction: column;
     height: 100%;
-    gap: 5.2rem;
+    gap: 4.5rem;
   }
 
   .ul-rutes>li>a{

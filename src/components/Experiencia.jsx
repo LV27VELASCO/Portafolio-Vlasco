@@ -4,7 +4,7 @@ import '../style/Experiencia.css'
 const Experiencia = () => {
   return (
     <>
-    <section id='3' className='habilidades' >
+    <section id='Experiencia' className='habilidades' >
         <div className='contain-habilidades'>
 
           <div className='skills'>
@@ -81,6 +81,13 @@ const Experiencia = () => {
 
                 <div className='icon-hability'>
                   <i className='bx bxl-javascript' id='javascript'></i>
+                </div>
+              </div>
+              <div className='programs'>
+                <h4>Node Js</h4>
+
+                <div className='icon-hability'>
+                  <i className='bx bxl-nodejs' id='nodejs'></i>
                 </div>
               </div>
               <div className='programs'>
