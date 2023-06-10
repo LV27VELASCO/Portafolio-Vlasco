@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@500;700&display=swap');
 .habilidades {
     width: 100%;
     height: auto;
@@ -95,11 +96,14 @@
     font-weight: 400;
     color: whitesmoke;
 }
-
+.data>span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #a99a87;
+}
 .data>p {
     font-size: 1.05rem;
     font-weight: 200;
-    
 }
 
 .data>h4 {
@@ -138,7 +142,7 @@
     text-align: center;
     font-size: 3.8rem;
     animation: pulse infinite linear;
-  animation-duration: 2.3s; 
+    animation-duration: 2.3s; 
 }
 
 #html{
@@ -153,18 +157,29 @@
     color: yellow;
 }
 
+#net{
+    height: 60px;
+}
+
 #react{
     color: rgb(0, 179, 255);
 }
 
 #git{
-    color: #000000;
+    color: rgb(232,78,49);
 }
 
 #redux{
     color: rgb(51, 2, 116);
 }
 
+#docker{
+    color: rgb(35,145,230);
+}
+
+#dataBase{
+    color: rgb(190,190,190);
+}
 
 
 @media (max-width:620px) {

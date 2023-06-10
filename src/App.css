@@ -4,12 +4,20 @@
   box-sizing: border-box;
 }
 
+b{
+  font-weight: 600;
+}
+
 a{
   text-decoration: none;
 }
 
 html{
   scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
 }
 
 body::-webkit-scrollbar{
@@ -21,8 +29,6 @@ body::-webkit-scrollbar-thumb{
   background-color:#C49B66;
   border-radius: 1px;
 }
-
-
 
 :root {
   ---Poppins: 'Poppins', sans-serif;
@@ -36,7 +42,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .app{
-  width: fit-content;
+  width: 100%;
   position: relative;
   overflow: hidden;
   background-color:var(---DarkInactive);
@@ -55,7 +61,6 @@ body::-webkit-scrollbar-thumb{
 .app h2{
   color:var(---letter-Dark-Inactive) ;
 }
-
 
 .app.active .redes{
   border: 1px solid white;
@@ -88,9 +93,6 @@ body::-webkit-scrollbar-thumb{
   transition: all .5s ease-in-out;
 }
 
-
-
-
 .app.active>nav.active{
   background-color:black;
 }
@@ -114,6 +116,7 @@ body::-webkit-scrollbar-thumb{
   transition: all ease-in-out .5s;
   box-shadow: 0px 0px 5px 0px rgba(14, 13, 13, 0.88);
 }
+
 .dark::after{
   content:'';
   width: 6px;
@@ -143,6 +146,7 @@ body::-webkit-scrollbar-thumb{
   box-shadow: 0px 0px 5px 0px rgba(235, 235, 133, 0.88);
   transition: all ease-in-out .5s;
 }
+
 .dark.active::after{
   content:'';
   width: 6px;
@@ -157,10 +161,6 @@ body::-webkit-scrollbar-thumb{
   transform: translateY(-12%);
   transition: all ease-in-out .5s;
 }
-
-
-
-
 
 .nav {
   width: 100%;
@@ -201,7 +201,6 @@ body::-webkit-scrollbar-thumb{
   justify-content: space-between;
   align-items: center;
 }
-
 
 .contain-logo {
   width: 150px;
@@ -260,7 +259,7 @@ body::-webkit-scrollbar-thumb{
 .Principal {
   width: 100%;
   height: 100vh;
-  background-image: url(../src/assets/img/Borroso2.jpg);
+  background-image: url(../src/assets/img/Portada.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -290,9 +289,6 @@ body::-webkit-scrollbar-thumb{
   z-index: 2;
 }
 
-
-
-
 .content-yo {
   display: flex;
   justify-content: center;
@@ -317,29 +313,17 @@ body::-webkit-scrollbar-thumb{
 @keyframes heart {
   0% {
     opacity: 0
-  }
-
-  ;
-
+  };
   25% {
     opacity: 0.3
-  }
-
-  ;
-
+  };
   50% {
     opacity: 0.6
-  }
-
-  ;
-
+  };
   100% {
     opacity: 1
-  }
-
-  ;
+  };
 }
-
 
 .content-soy {
   display: flex;
@@ -362,7 +346,6 @@ body::-webkit-scrollbar-thumb{
   font-size: 3.4rem;
   font-weight: 600;
 }
-
 
 @media screen and (max-width:620px){
   .content-yo{
@@ -397,8 +380,6 @@ body::-webkit-scrollbar-thumb{
     color: var(---letter-Dark-Inactive);
   }
 
-
-
   .contain-nav{
     width: 95%;
   }
@@ -407,8 +388,6 @@ body::-webkit-scrollbar-thumb{
     display: block;
     cursor: pointer;
   }
-
-
 
   .nav-contain-rutes {
     align-items: center;
@@ -431,7 +410,6 @@ body::-webkit-scrollbar-thumb{
     height: 100%;
     gap: 5.2rem;
   }
-
 
   .ul-rutes>li>a{
     font-size: 1.25rem;
