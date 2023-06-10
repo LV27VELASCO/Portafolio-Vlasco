@@ -24,7 +24,7 @@ const SobreMi = () => {
             <div>
             </div>
             <div className='contain-buttons'>
-              <a href="#5">
+              <a href="#Contacto">
                 <div className="button-container-1">
                   <span className="contact"><i className='bx bxs-paper-plane'></i></span>
                   <button id='work' type="button" name="Hover">CONTACTO</button>
