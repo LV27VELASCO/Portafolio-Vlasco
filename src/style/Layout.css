@@ -178,7 +178,7 @@
   .logo{
     width: 100%;
     height: 100%;
-    background-image: url('../src/assets/img/Logo-nav.png');
+    background-image: url("../assets/img/Logo-nav.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -188,7 +188,7 @@
   .logo.active{
     width: 100%;
     height: 100%;
-    background-image: url('../src/assets/img/Logo-nav-active.png');
+    background-image: url("../assets/img/Logo-nav-active.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -227,7 +227,7 @@
   .Inicio {
     width: 100%;
     height: 100vh;
-    background-image: url(../src/assets/img/Portada.jpg);
+    background-image: url("../assets/img/Portada.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
