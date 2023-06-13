@@ -115,12 +115,12 @@ const Experiencia = () => {
                   <i className='bx bxl-redux' id='redux'></i>
                 </div>
               </div>
-              <div className='programs'>
+              {/* <div className='programs'>
                 <h4>Docker</h4>
                 <div className='icon-hability'>
                 <i className='bx bxl-docker' id='docker'></i>
                 </div>
-              </div>
+              </div> */}
               <div className='programs'>
                 <h4>SQL / Oracle</h4>
                 <div className='icon-hability'>
