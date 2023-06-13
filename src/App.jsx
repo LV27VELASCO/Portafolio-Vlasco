@@ -1,13 +1,28 @@
-import React,{lazy,Suspense} from 'react'
-const Layout = lazy(()=>import('./components/Layout'))
+import React,{ Suspense, lazy, useEffect,useState} from 'react'
+const Layout = lazy(()=>import('./components/Layout')) 
 import Loading from './components/Loading'
 import "./App.css"
+import Preload from './components/Preload'
 function App() {
+  const [load, setLoad] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 4800);
+  }, [])
+  
   return (
     <>
-    <Suspense fallback={<Loading/>} >
-      <Layout/>
-    </Suspense>
+    {
+      load
+      ?
+      <Preload/>
+      :
+      <Suspense fallback={<Loading/>}>
+        <Layout/>
+      </Suspense>
+    }
     </>
   )
 }

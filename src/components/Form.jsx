@@ -6,10 +6,10 @@ const Form = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_o9mqgyy",
-        "template_5wpdgkt",
+        "service_yezwe9gz",
+        "template_7y4e5mk",
         e.target,
-        "UtCaJAD6qKQL6LDSe"
+        "sHTQkeYpVBiLWd-jA"
       )
       .then((res) => {
         alert("Mensaje enviado correctamente");
