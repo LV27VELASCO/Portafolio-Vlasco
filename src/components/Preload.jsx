@@ -1,24 +1,26 @@
 import { gsap } from 'gsap';
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "../style/Loading.css";
 
 const Preload = () => {
+    const loadPage = useRef();
+    const logoName = useRef()
     useEffect(() => {
         gsap.fromTo(
-          ".loading-page",
+          loadPage.current,
           { opacity: 1 },
           { opacity: 0, duration: 1.5, delay: 3.5 }
         );
     
         gsap.fromTo(
-          ".logo-name",
+          logoName.current,
           { y: 50, opacity: 1 },
           { y: 0, opacity: 1, duration: 2, delay: 0.5 }
         );
       }, []);
   return (
     <>
-    <div className="loading-page">
+    <div ref={loadPage} className="loading-page">
         <svg
           version="1.1"
           id="svg"
@@ -46,7 +48,7 @@ const Preload = () => {
           </g>
         </svg>
         <div className="name-container">
-          <div className="logo-name">VELASCO DEV</div>
+          <div ref={logoName}  className="logo-name">VELASCO DEV</div>
         </div>
       </div>
       </>

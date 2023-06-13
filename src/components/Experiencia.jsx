@@ -29,7 +29,7 @@ const Experiencia = () => {
             <div className='data'>
               <h3>SENA</h3>
               <span>2020</span>
-              <p>Gestion Bancaria y Entidades Financieras</p>
+              <p>Gestión Bancaria y Entidades Financieras</p>
             </div>
           </div>
 
