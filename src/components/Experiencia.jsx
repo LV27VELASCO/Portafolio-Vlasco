@@ -93,7 +93,7 @@ const Experiencia = () => {
               <div className='programs'>
                 <h4>.NET (C#)</h4>
                 <div className='icon-hability'>
-                  <img src={NET} id='net'/>
+                  <img src={NET} id='net' alt='Csharp'/>
                 </div>
               </div>
               <div className='programs'>

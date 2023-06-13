@@ -1,6 +1,6 @@
 import React from 'react'
 import perfil from '../assets/img/Perfil-luis.jpg'
-import curriculum from '../assets/img/Currículum_Luis_Velasco.pdf'
+import curriculum from '../assets/doc/Currículum_Luis_Velasco.pdf'
 import '../style/SobreMi.css'
 const SobreMi = () => {
   return (
@@ -8,7 +8,7 @@ const SobreMi = () => {
     <section className='sobre-mi' id='SobreMi'>
         <div className='contain-datos'>
           <div className='container-foto'>
-            <img src={perfil} className="foto" />
+            <img src={perfil} className="foto" alt='perfil'/>
           </div>
           <div className='presentacion'>
             <div className='profesion'><h2>Desarrollador Web</h2></div>

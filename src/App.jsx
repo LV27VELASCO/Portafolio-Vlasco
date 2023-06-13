@@ -1,29 +1,14 @@
-import SobreMi from './components/SobreMi'
-import Portafolio from './components/Portafolio'
-import Contacto from './components/Contacto'
-import Portada from './components/Portada'
-import Navegacion from './components/Navegacion'
-import Experiencia from './components/Experiencia'
-import useUtility from './Hooks/useUtility'
-import './App.css'
-
+import React,{lazy,Suspense} from 'react'
+const Layout = lazy(()=>import('./components/Layout'))
+import Loading from './components/Loading'
+import "./App.css"
 function App() {
-  const {menuActive,darkMode,navbar,modeDark,clickMenu} = useUtility()
-  const fecha = new Date()
   return (
-    <article className={darkMode?'app active' : 'app'}>
-      <Navegacion navbar={navbar} menuActive={menuActive} 
-      darkMode={darkMode} modeDark={modeDark} 
-      clickMenu={clickMenu}/>
-      <Portada/>
-      <SobreMi/>
-      <Experiencia/>
-      <Portafolio/>
-      <Contacto/>
-      <footer>
-        <span>{fecha.getFullYear()}</span>
-      </footer>
-    </article>
+    <>
+    <Suspense fallback={<Loading/>} >
+      <Layout/>
+    </Suspense>
+    </>
   )
 }
 

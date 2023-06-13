@@ -1,4 +1,4 @@
-import '../App.css'
+import '../style/Layout.css'
 const Navegacion = ({navbar,darkMode,menuActive,modeDark,clickMenu}) => {
     
   return (

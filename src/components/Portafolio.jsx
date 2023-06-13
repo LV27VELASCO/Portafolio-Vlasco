@@ -15,7 +15,7 @@ const Portafolio = () => {
         </div>
         <div className='flex-portafolio'>
           <div className="cardxxxx">
-            <img src={shoppingcard} />
+            <img src={shoppingcard} alt='Ecomerce'/>
             <div className='description-card'>
               <h3>Ecomerce</h3>
               <p>Proyecto desarrollado en Academlo en el cual se desarrolló la interfaz
@@ -23,7 +23,7 @@ const Portafolio = () => {
             </div>
           </div>
           <div className="card">
-            <img src={quotecard} />
+            <img src={quotecard} alt='Frases'/>
             <a href="https://frases-and-autores.netlify.app" target='_blank'>
               <div className='description-card'>
                 <h3>Quote Machine</h3>
@@ -33,7 +33,7 @@ const Portafolio = () => {
             </a>
           </div>
           <div className="card">
-            <img src={weathercard} />
+            <img src={weathercard} alt='App Clima'/>
             <a href="https://veloc-climate.netlify.app" target='_blank'>
               <div className='description-card'>
                 <h3>Weather App</h3>
@@ -44,7 +44,7 @@ const Portafolio = () => {
 
           </div>
           <div className="card">
-            <img src={pokeapp} />
+            <img src={pokeapp} alt='pockeApi'/>
             <a href="https://pokedex-lvelasco.netlify.app" target='_blank'>
               <div className='description-card'>
                 <h3>Pokedex</h3>
@@ -57,7 +57,7 @@ const Portafolio = () => {
             </a>
           </div>
           <div className="card">
-            <img src={instacard} />
+            <img src={instacard} alt='instaClone'/>
             <a href="https://veloc-ints.netlify.app" target='_blank'>
               <div className='description-card'>
                 <h3>Instagram Clone</h3>
@@ -68,7 +68,7 @@ const Portafolio = () => {
           </div>
 
           <div className="card">
-            <img src={RickandMorty} />
+            <img src={RickandMorty} alt='rick and morty app'/>
             <a href="https://veloc-rick-and-morty-api.netlify.app" target='_blank'>
               <div className='description-card'>
                 <h3>Rick And Morty Wiki</h3>
