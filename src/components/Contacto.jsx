@@ -29,7 +29,7 @@ const Contacto = () => {
               <i className='bx bxs-envelope-open'></i>
               <div className='contacting'>
                 <h3>Email</h3>
-                <p>luiselsw27@gmail.com</p>
+                <p>leduvelasco@gmail.com</p>
               </div>
             </div>
             <div className='info'>
