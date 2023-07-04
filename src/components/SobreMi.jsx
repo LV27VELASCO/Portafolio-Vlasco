@@ -1,6 +1,5 @@
 import React from 'react'
 import perfil from '../assets/img/Perfil-luis.jpg'
-import curriculum from '../assets/doc/Currículum_Luis_Velasco.pdf'
 import '../style/SobreMi.css'
 const SobreMi = () => {
   return (
@@ -32,7 +31,7 @@ const SobreMi = () => {
               </a>
               <div className="button-container-2">
                 <span className="hv"><i className='bx bxs-download'></i></span>
-                <a href={curriculum} download='Luis_Velasco_CV' ><button id='descarga' type="button" name="Hover">DESCARGA CV</button></a>
+                <a href='https://drive.google.com/uc?export=download&id=18QoAYQBL12BxQRtniLM60FFAtml8CzLn' download ><button id='descarga' type="button" name="Hover">DESCARGA CV</button></a>
               </div>
             </div>
           </div>
